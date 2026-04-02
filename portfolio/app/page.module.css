@@ -290,3 +290,63 @@
 .delay100 { transition-delay: 100ms; }
 .delay200 { transition-delay: 200ms; }
 .delay300 { transition-delay: 300ms; }
+
+.bounce {
+  animation: bounce 2.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ── Curly Scroll Arrows ── */
+.scrollArrowWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0 1rem;
+  padding-left: 0.5rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scrollArrowWrapper.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scrollArrowSvg {
+  width: 56px;
+  height: 90px;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
+  animation: arrowFloat 2.4s ease-in-out infinite;
+}
+
+.scrollArrowPath {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: drawArrow 1.8s cubic-bezier(0.4, 0, 0.2, 1) forwards, arrowPulse 2.4s ease-in-out 1.8s infinite;
+}
+
+@keyframes drawArrow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes arrowFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(10px); }
+}
+
+@keyframes arrowPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
