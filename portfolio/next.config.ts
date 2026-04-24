@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  /* config options here */
+  basePath: '/Lorenso-Dev',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
