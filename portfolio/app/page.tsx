@@ -167,7 +167,7 @@ export default function Home() {
           <h2 className={`${styles.sectionTitle} ${styles.reveal}`}>Featured Projects</h2>
           <div className={styles.grid}>
             {/* Project 1 */}
-            <div className={`${styles.card} glass glass-interactive ${styles.reveal}`}>
+            <div className={`${styles.card} ${styles.sensitiveCard} glass glass-interactive ${styles.reveal}`}>
               <h3>Sensitive</h3>
               <p>sensitive is a browser extension that shields your eye intensively from unwanted content on the internet</p>
               <div className={styles.tags}>
