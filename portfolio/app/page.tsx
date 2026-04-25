@@ -121,7 +121,7 @@ export default function Home() {
         <header className={styles.header}>
           <div className={styles.reveal}>
             <img 
-              src="/hero-logo.png"
+              src="/Lorenso-Dev/hero-logo.png"
               alt="Hero Logo"
               style={{ borderRadius: '50px', marginBottom: '2rem', maxWidth: '100%', width: '400px' }}
               className={styles.bounce}
